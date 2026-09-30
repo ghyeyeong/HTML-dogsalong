@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+header .gnb .depth1 .on {
+    padding: 28px 15px;
+    background: #e1535f;
+    color: #fff;
+}
+
+/* sub-visual */
+.sub-visual {
+    background: linear-gradient(135deg, #fff7ec 0%, #ffe8df 100%);
+}
+
+.sub-visual .visual-inner {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sub-visual .visual-text {
+    flex: 1;
+}
+
+.sub-visual .visual-text .sub-title {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #6d5a50;
+    margin-bottom: 50px;
+    width: 85%;
+    word-break: keep-all;
+}
+
+.btn-area {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-area .btn {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-area .btn-main {
+    background: #e1535f;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(224, 111, 121, 0.25);
+}
+
+.btn-area .btn-sub {
+    border: 1px solid #e1535f;
+    color: #e1535f;
+}
+
+/* 버튼 사용성 */
+.btn-main:hover,
+.reserve-btn:hover {
+    background: #e1535f;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(224, 111, 121, 0.25);
+}
+
+.btn-sub:hover {
+    background: #e1535f;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.visual-img {
+    flex: 1;
+    border-radius: 36px;
+    overflow: hidden;
+    animation: fadeUp 1s ease forwards;
+}
+
+.visual-img img {
+    height: 620px;
+    object-fit: cover;
+    transition: 0.7s;
+}
+
+/* 이미지 애니메이션 */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* class-content */
+
+
+#class-content .inner ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#class-content .inner ul li {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    flex: 1;
+    /* flex: 1 -> 부모 넓이 기준 100% / 자식요소 개수만큼 균등배분 */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu-list figure {
+    position: relative;
+    overflow: hidden;
+    /* 부모 높이보다 큰 이미지는 숨김처리 */
+    height: 240px;
+}
+
+.menu-list figure img {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.menu-list li:hover figure img {
+    transform: translateY(-25px);
+}
+
+#sec-menu .inner ul li .menu-text {
+    padding: 20px 10px;
+}
+
+.menu-list .menu-text {
+    height: 260px;
+}
+
+.menu-list li {
+    background: #fff;
+}
+
+.menu-list .menu-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.menu-list .menu-text p {
+    word-break: keep-all;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+
+.menu-list .menu-text .btn-buy {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 30px;
+    border: 1px solid #c85f68;
+    color: #c85f68;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.menu-list li:hover .menu-text {
+    transform: translateY(-30px);
+}
+
+.menu-list li:hover .menu-text .btn-buy {
+    opacity: 1;
+}
+
+/* 선생님 */
+#class-content .title-area {
+    text-align: center;
+}
+
+.title-area h2 {
+    margin-bottom: 20px;
+}
+
+.title-area .sub-title {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.menu-list .menu-text p {
+    margin-bottom: 15px;
+}
+
+.menu-list .menu-text .util {
+    text-align: left;
+}
+
+.menu-list .menu-text .util span {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.menu-list .menu-text .util span:first-child::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background: #6d5a50;
+    content: '';
+}
+
+.menu-list ion-icon {
+    font-size: 24px;
+    color: #c95b66;
+    vertical-align: -5px;
+}
+
+/* //클래스 */
+
+/* 레시피 포인트 */
+#recipe-point {
+    background: rgb(252, 249, 226);
+}
+
+#recipe-point .inner {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+#recipe-point .recipe-img {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 30px;
+    animation: floatImg 3s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.recipe-text {
+    flex: 1;
+}
+
+.recipe-text li {
+    padding: 22px 0;
+    border-bottom: 1px solid #ead8c8;
+}
+
+.recipe-text strong {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #e1535f;
+    margin-bottom: 10px;
+}
+
+.recipe-text strong::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(201, 91, 102, 0.3);
+    content: '';
+}
+
+.recipe-text p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* 내가 만든거 */
+.recipe-img img {
+    height: 520px;
+    object-fit: cover;
+}
+
+#recipe-point .text-area li {
+    position: relative;
+    font-size: 20px;
+    color: #c85f68;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+#recipe-point .text-area li::after {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    transform: translateY(-50%);
+    width: 540px;
+    height: 1px;
+    background: #6d5a50;
+    content: '';
+}
+
+#recipe-point .text-area li p {
+    color: black;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* //내가 만든 레시피 */
+
+/* 클래스 정보 */
+#sec-info .title-area {
+    text-align: center;
+}
+
+#sec-info .info-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#sec-info .info-list li {
+    flex: 1;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#sec-info .info-list strong {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #e1535f;
+    margin-bottom: 15px;
+}
+
+#sec-info .info-list p {
+    font-size: 18px;
+}
